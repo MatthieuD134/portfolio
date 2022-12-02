@@ -18,6 +18,8 @@ $themes: (
     on-background: #000,
     on-secundary: #000,
     on-primary: #fff,
+
+    background-gradient: linear-gradient(135deg, #fff, #ffefba),
   ),
   dark: (
     primary: #6200ee,
@@ -38,5 +40,7 @@ $themes: (
     on-background: #fff,
     on-secundary: #000,
     on-primary: #fff,
+
+    background-gradient: linear-gradient(135deg, #2c5364, #203a43, #0f2027),
   ),
 );

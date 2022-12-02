@@ -1,0 +1,12 @@
+@import url('@styles/config');
+
+.scene {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+}
+
+.canvas {
+  @include theme-aware('background', 'background-gradient');
+}

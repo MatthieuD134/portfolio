@@ -1,4 +1,5 @@
-import Button from '@src/components/common/Button';
+import BackgroundScene from '@src/components/BackgroundScene';
+import ThemeSelector from '@src/components/common/ThemeSelector';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 
@@ -14,8 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <BackgroundScene />
+
       <main className={styles.main}>
-        <Button>Click Me</Button>
+        <ThemeSelector />
       </main>
     </div>
   );
