@@ -9,7 +9,7 @@ $themes: (
     secondary-variant: #018786,
 
     background: #fff,
-    surface-light: rgb(0 0 0 /10%),
+    surface-light: rgb(255 255 255 / 20%),
     surface: #fff,
     error: #b00020,
 
@@ -18,6 +18,9 @@ $themes: (
     on-background: #000,
     on-secundary: #000,
     on-primary: #fff,
+
+    black-color: #000,
+    white-color: #fff,
 
     background-gradient: linear-gradient(135deg, #fff, #ffefba),
   ),
@@ -31,7 +34,7 @@ $themes: (
     secondary-variant: #018786,
 
     background: #000,
-    surface-light: rgb(255 255 255 /10%),
+    surface-light: rgb(0 0 0 / 20%),
     surface: #000,
     error: #b00020,
 
@@ -40,6 +43,9 @@ $themes: (
     on-background: #fff,
     on-secundary: #000,
     on-primary: #fff,
+
+    black-color: #000,
+    white-color: #fff,
 
     background-gradient: linear-gradient(135deg, #2c5364, #203a43, #0f2027),
   ),

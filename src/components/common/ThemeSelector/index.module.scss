@@ -1,0 +1,63 @@
+@import '@styles/config';
+
+.themeSwitcher {
+  @include theme-aware('background-color', 'surface-light');
+
+  backdrop-filter: blur(15px);
+  border-color: transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  height: 40px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: all ease 200ms;
+  width: 90px;
+}
+
+.background {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.iconSelector {
+  @include theme-aware('background-color', 'white-color');
+
+  border-radius: 36px;
+  height: 36px;
+  left: 2px;
+  position: absolute;
+  transition: translate ease 200ms;
+  width: 36px;
+}
+
+.left {
+  translate: 0;
+}
+
+.right {
+  translate: 50px;
+}
+
+.iconContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.icon {
+  z-index: 1;
+}
+
+.darkIcon {
+  filter: brightness(0);
+}
