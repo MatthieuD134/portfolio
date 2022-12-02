@@ -1,0 +1,41 @@
+@import url('./theme');
+@use 'sass:map';
+
+// Define the breakpoints
+$breakpoints: (
+  'x-small': 300px,
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px,
+  'x-large': 1440px,
+) !default;
+
+// Mixin to manage responsive breakpoints, Mobile first
+// @param {String} $breakpoint - Breakpoint name
+// @require $breakpoints
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn 'breakpoint does not exist.' + 'Available breakpoints: #{map-keys($breakpoints)}';
+  }
+}
+
+/**
+ * theme-aware - Change color of a css property based on the currently active theme
+ *
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _color-palette.scss
+ *
+ * @example - @include theme-aware('background', 'color-background');
+ * @returns - background: #FFF;
+ */
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    :global(.theme_#{$theme-name}) & {
+      #{$key}: map.get(map.get($themes, $theme-name), $color);
+    }
+  }
+}

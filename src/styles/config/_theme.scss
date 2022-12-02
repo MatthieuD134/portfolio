@@ -1,0 +1,42 @@
+$themes: (
+  light: (
+    primary: #6200ee,
+    primary-high: #6200ee87,
+    primary-md: #6200ee60,
+    primary-light: #6200ee38,
+    primary-variant: #3700b3,
+    secondary: #03dac6,
+    secondary-variant: #018786,
+
+    background: #fff,
+    surface-light: rgb(0 0 0 /10%),
+    surface: #fff,
+    error: #b00020,
+
+    on-error: #fff,
+    on-surface: #000,
+    on-background: #000,
+    on-secundary: #000,
+    on-primary: #fff,
+  ),
+  dark: (
+    primary: #6200ee,
+    primary-high: #6200ee87,
+    primary-md: #6200ee60,
+    primary-light: #6200ee38,
+    primary-variant: #3700b3,
+    secondary: #03dac6,
+    secondary-variant: #018786,
+
+    background: #000,
+    surface-light: rgb(255 255 255 /10%),
+    surface: #000,
+    error: #b00020,
+
+    on-error: #fff,
+    on-surface: #fff,
+    on-background: #fff,
+    on-secundary: #000,
+    on-primary: #fff,
+  ),
+);
