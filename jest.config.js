@@ -25,9 +25,10 @@ module.exports = {
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
 
     // Handle module aliases
-    '^@pages/(.*)$': '<rootDir>/pages/$1',
+    '^@pages/(.*)$': '<rootDir>/src/pages/$1',
     '^@src/(.*)$': '<rootDir>/src/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@styles/(.*)$': '<rootDir>/src/styles/$1',
   },
   testEnvironment: 'jsdom',
   transform: {
