@@ -1,5 +1,5 @@
 @use 'sass:map';
-@import url('./theme');
+@import './theme';
 
 // Define the breakpoints
 $breakpoints: (
