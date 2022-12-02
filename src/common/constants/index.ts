@@ -1,3 +1,3 @@
-export const ROUTER = {
+export const router = {
   HOME: '/',
 };
