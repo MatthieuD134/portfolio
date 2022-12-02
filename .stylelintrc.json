@@ -11,6 +11,7 @@
     "annotation-no-unknown": [
       true,
       { "ignoreAnnotations": ["important", "default"] }
-    ]
+    ],
+    "no-invalid-position-at-import-rule": null
   }
 }
