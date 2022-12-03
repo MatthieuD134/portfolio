@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 
 import LightModeLogo from '@src/common/icons/lightMode.svg';
 import DarkModeLogo from '@src/common/icons/darkMode.svg';
-import { useThemeContext } from './ThemeProvider';
+import { useThemeContext } from '@src/modules/ThemeProvider';
 
 const ThemeSelector = () => {
   const { theme, setTheme } = useThemeContext();
