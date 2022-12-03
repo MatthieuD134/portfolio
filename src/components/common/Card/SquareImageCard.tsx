@@ -7,7 +7,6 @@ interface SquareImageCardProps {
   image: string;
   imageAlt: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
-  key?: React.Key;
   disableTabNav?: boolean;
   tiltHoverEffect?: boolean;
 }
@@ -17,17 +16,12 @@ const SquareImageCard = ({
   image,
   imageAlt,
   onClick,
-  key,
   disableTabNav = false,
   tiltHoverEffect = false,
 }: SquareImageCardProps) => {
   const [imgLoaded, setImageLoaded] = useState(false);
   return (
-    <div
-      className={styles.cardContainer}
-      key={key || null}
-      tabIndex={disableTabNav ? -1 : 0}
-    >
+    <div className={styles.cardContainer} tabIndex={disableTabNav ? -1 : 0}>
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
