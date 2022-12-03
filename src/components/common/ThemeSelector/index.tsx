@@ -1,20 +1,16 @@
 import { THEMES } from '@src/common/constants';
-import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 
 import LightModeLogo from '@src/common/icons/lightMode.svg';
 import DarkModeLogo from '@src/common/icons/darkMode.svg';
+import { useThemeContext } from './ThemeProvider';
 
 const ThemeSelector = () => {
-  const [theme, setTheme] = useState(THEMES.LIGHT);
+  const { theme, setTheme } = useThemeContext();
 
   const handleChangeTheme = (theme: string) => {
     setTheme(theme);
   };
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
 
   return (
     <button
