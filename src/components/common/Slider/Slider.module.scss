@@ -1,0 +1,96 @@
+@import '../../../styles/config';
+
+.slider {
+  @include theme-aware('background-color', 'surface');
+
+  position: fixed;
+  z-index: 10;
+  left: calc(50% - min(300px, 45%));
+  bottom: 0;
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid rgb(255 255 255 / 60%);
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 /10%);
+  touch-action: none;
+  transition: all 200ms ease-in-out;
+  translate: 0 calc(100% - 3em);
+
+  .barContainer {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    right: 0;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .barToOpen {
+      @include theme-aware('background-color', 'on-surface');
+      @include theme-aware('color', 'on-surface');
+
+      width: 50px;
+      height: 4px;
+      border-radius: 4px;
+      opacity: 0.6;
+    }
+
+    &:hover .barToOpen {
+      opacity: 0.87;
+    }
+  }
+
+  .titleDiv {
+    @include theme-aware('color', 'on-surface');
+
+    display: flex;
+    overflow: hidden;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .childrenDiv {
+    padding: 1em;
+  }
+}
+
+.open {
+  translate: 0 10px;
+}
+
+.decoration {
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  translate: 0 calc(-100% - 10px);
+
+  &:focus {
+    translate: 0;
+  }
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
